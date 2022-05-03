@@ -1,15 +1,21 @@
-import logo from './logo.svg';
+import {Route,Routes} from 'react-router-dom'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import ItemListContainer from './components/pages/ItemListContainer';
+import ItemDetailContainer from './components/pages/ItemDetailContainer';
 import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
+
 
 function App() {
   return (
     <div className="App">
       <NavBar/>
-      <ItemListContainer greeting="Catalogo"/>
+      <Routes>
+        <Route path='/' element={<ItemListContainer/>}/>
+        <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
+        <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+      </Routes>      
     </div>
   );
 }
