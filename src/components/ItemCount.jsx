@@ -22,7 +22,7 @@ function ItemCount({ stock, initial, onAdd }) {
         <div id="botones">
           <Button id="boton-" variant="primary" onClick={() => handleMinus()}>-</Button>
           <Card.Text>
-            cantidad a comprar {count}
+            {count}
           </Card.Text>
           <Button id="boton+" variant="primary" onClick={() => handlePlus()}>+</Button>
         </div>

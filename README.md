@@ -1,3 +1,12 @@
+
+El proyecto se basa en un e-comerce de elementos de copmutadoras, totalmente ficticio,
+
+fuera de las dependencias tratadas en clase se incluyo react-bootstrap para dar estilo a los componentes
+
+sigue con los 2s de delay en las cargas, no sabia si eso habia que quitarlo o dejarlo asi que lo deje
+
+Dejo el codigo de abajo porque tiene algunos datos utiles espero no moleste
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -14,6 +14,7 @@ function ItemDetail({ item }) {
       <div className='right'>
         <div className='info-detail'>
           <h2>{item?.nombre}</h2>
+          <p>{item?.detail}</p>
           <p>{item?.precio}</p>
           <div className='count-container'>
             <ItemCount initial={0} stock={item.stock} onAdd={() => { }} />
