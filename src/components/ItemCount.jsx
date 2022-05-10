@@ -22,11 +22,11 @@ function ItemCount({ stock, initial, onAdd }) {
         <div id="botones">
           <Button id="boton-" variant="primary" onClick={() => handleMinus()}>-</Button>
           <Card.Text>
-            {count}
+            <input readOnly value={count}></input>
           </Card.Text>
           <Button id="boton+" variant="primary" onClick={() => handlePlus()}>+</Button>
         </div>
-        <button onClick={() => (count <= stock) && onAdd()}>Agregar al carrito</button>
+        <button onClick={() => (count <= stock) && onAdd(count)}>Agregar al carrito</button>
       </Card.Body>
     </Card>
   )

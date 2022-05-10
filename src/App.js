@@ -5,6 +5,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import ItemListContainer from './components/pages/ItemListContainer';
 import ItemDetailContainer from './components/pages/ItemDetailContainer';
 import NavBar from './components/NavBar';
+import Cart from './components/Cart'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <NavBar/>
       <Routes>
         <Route path='/' element={<ItemListContainer/>}/>
+        <Route path='/cart' element={<Cart/>}/>
         <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
         <Route path='/item/:id' element={<ItemDetailContainer/>}/>
       </Routes>      

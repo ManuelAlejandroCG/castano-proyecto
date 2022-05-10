@@ -9,3 +9,8 @@
     display: flex;
     justify-content: space-evenly;
 } 
+
+input{
+    width:50px;
+    text-align: center;
+}
