@@ -1,13 +1,15 @@
-import React, {useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
+import CartContext from './store/cart-context';
 import ItemCount from './ItemCount';
 import './ItemDetail.css';
 
 function ItemDetail({ item }) {
- const [cantidadProductos, setCantidadProductos] = useState(null);
+ const cartCtx = useContext(CartContext);
+
  function addHandler(cantidadAgregar){
-   setCantidadProductos(cantidadAgregar);
-  }
+   cartCtx.add({quantity: cantidadAgregar, ...item});
+  }  
   return (
     <div className='item-detail'>
       <div className='left'>
@@ -20,19 +22,22 @@ function ItemDetail({ item }) {
           <h2>{item?.nombre}</h2>
           <p>{item?.detail}</p>
           <p>{item?.precio}</p>
-          <div className='count-container'>
-            {cantidadProductos ?
-            <button><Link to='/cart'>Carrito ({cantidadProductos} items)</Link></button> :
+          <div className='count-container'> 
             <ItemCount initial={0} stock={item.stock} onAdd={addHandler} />
+            <button onClick={()=>cartCtx.remove(item.id)}>Remover</button>            
+            <button onClick={()=>console.log(cartCtx.isInCart(item.id))}>Esta?</button>
+            <button onClick={()=>cartCtx.clear()}>Vaciar Carrito</button>
+            {cartCtx.productos.length &&            
+                <Link to='/cart'>
+                <button>
+                
+                  Carrito ({cartCtx.cantidad()} items)
+                
+                </button>
+                </Link>
             } 
           </div>
         </div>
-        <Link to={'/'}>
-          <button>Volver</button>
-        </Link>
-        <Link to={'/cart'}>
-          <button>Carrito</button>
-        </Link>
       </div>
     </div>
   )

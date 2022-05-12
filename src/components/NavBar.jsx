@@ -24,7 +24,7 @@ function NavBar(props) {
                             </NavDropdown>                            
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#carrito"><CartWidget /></Nav.Link>
+                            <Nav.Link to='/cart'><CartWidget /></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
