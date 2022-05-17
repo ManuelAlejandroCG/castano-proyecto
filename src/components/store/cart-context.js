@@ -1,5 +1,8 @@
-import {createContext,useState} from "react";
+import {createContext,useState, useContext} from "react";
 import {Swal} from 'sweetalert2'
+import Cart from "../Cart";
+
+export const useCartContext = () => useContext(CartContext)
 
 const CartContext = createContext({
     productos: [],
@@ -7,7 +10,9 @@ const CartContext = createContext({
     remove: () => {},
     clear: () => {},
     isInCart: () => {},
-    cantidad: () => {}
+    cantidad: () => {},
+    itemsTotal: () => {},
+    precioTotal: () =>{}
 });
 
 export const CartContextProvider = ({children}) => {
@@ -39,8 +44,7 @@ export const CartContextProvider = ({children}) => {
     }
 
     const remove = (id) => {
-        const itemARemover = productList.findIndex(item => item.id === id);
-        setProductList(productList.filter(i => i.id !== id))
+        setProductList(productList.filter((item) => item.id !== id))
     }
 
     const clear = () => {
@@ -57,13 +61,23 @@ export const CartContextProvider = ({children}) => {
         }, 0)
     }
 
+    const itemsTotal =() => {
+        return productList.reduce((total, item)=> total + item.quantity, 0);
+    }    
+
+    const precioTotal = () => {
+        return productList.reduce((total, item) => total + item.quantity * item.precio, 0);
+    }
+
     return (<CartContext.Provider value = {{
                 productos: productList,
                 add,
                 remove,
                 clear,
                 isInCart,
-                cantidad
+                cantidad,
+                itemsTotal,
+                precioTotal
             }}>
                 {children}
         </CartContext.Provider>
@@ -71,3 +85,4 @@ export const CartContextProvider = ({children}) => {
 }
 
 export default CartContext;
+

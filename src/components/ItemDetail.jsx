@@ -27,6 +27,7 @@ function ItemDetail({ item }) {
             <button onClick={()=>cartCtx.remove(item.id)}>Remover</button>            
             <button onClick={()=>console.log(cartCtx.isInCart(item.id))}>Esta?</button>
             <button onClick={()=>cartCtx.clear()}>Vaciar Carrito</button>
+            <button onClick={()=>console.log(cartCtx.precioTotal())}>prueba total</button>
             {cartCtx.productos.length &&            
                 <Link to='/cart'>
                 <button>
