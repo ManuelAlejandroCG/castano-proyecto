@@ -24,10 +24,8 @@ function ItemDetail({ item }) {
           <p>{item?.precio}</p>
           <div className='count-container'> 
             <ItemCount initial={0} stock={item.stock} onAdd={addHandler} />
-            <button onClick={()=>cartCtx.remove(item.id)}>Remover</button>            
-            <button onClick={()=>console.log(cartCtx.isInCart(item.id))}>Esta?</button>
+            <button onClick={()=>cartCtx.remove(item.id)}>Remover</button>
             <button onClick={()=>cartCtx.clear()}>Vaciar Carrito</button>
-            <button onClick={()=>console.log(cartCtx.precioTotal())}>prueba total</button>
             {cartCtx.productos.length &&            
                 <Link to='/cart'>
                 <button>

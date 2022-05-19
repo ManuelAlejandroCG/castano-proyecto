@@ -1,0 +1,36 @@
+
+.itemEnCart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(115, 115, 116);
+    width: 80%;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
+}
+
+.itemEnCart h1 {
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.itemEnCart img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cartImgContainer{
+    height: 100px;
+}
+
+.itemEnCart img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
