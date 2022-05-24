@@ -1,0 +1,9 @@
+.formulario{
+    width: 50%;
+    align-content: center;
+}
+
+input{
+    min-width: 200px;
+    align-self: center;
+}

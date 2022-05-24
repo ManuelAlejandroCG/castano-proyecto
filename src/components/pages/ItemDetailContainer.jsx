@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import {doc, getDoc, getFirestore, query, where} from 'firebase/firestore'
 import ItemDetail from '../ItemDetail';
 import './ItemDetailContainer.css'
-
+import Spinner from '../Spinner';
 
 function getItem(id){
   const db = getFirestore();
@@ -14,12 +14,14 @@ function getItem(id){
 function ItemDetailContainer() {
     const [item, setItem] = useState({});
     const {id} = useParams();
-    
+    const [load, setLoad] = useState(true)    
     useEffect(()=>{
+        setLoad(true)
         getItem(id)
         .then(snapshot=>{
             setItem({...snapshot.data(), id: snapshot.id});
-        })
+            setLoad(false)
+        })        
         .catch(err=>{
             console.log(err);
             alert('ocurrio un error en detail, mas informacion en consola')
@@ -28,7 +30,7 @@ function ItemDetailContainer() {
 
     return (
        <div className='contenedorDetails'>
-           <ItemDetail item={item}/>
+           {load ? <Spinner/> : <ItemDetail item={item}/>}
        </div>
     )
 }

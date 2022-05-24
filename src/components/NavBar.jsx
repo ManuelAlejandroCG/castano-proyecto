@@ -18,13 +18,13 @@ function NavBar(props) {
                             <NavDropdown title="Productos" id="collasible-nav-dropdown">
                                 <NavDropdown.Item ><NavLink to='/'>Catalogo</NavLink></NavDropdown.Item>
                                 <NavDropdown.Divider />
-                                <NavDropdown.Item><NavLink to='/category/mother' className={nav => nav.isActive ? 'nav-active' : ''}>Motherboards</NavLink></NavDropdown.Item>
-                                <NavDropdown.Item><NavLink to='/category/micro' className={nav => nav.isActive ? 'nav-active' : ''}>Microprocesadores</NavLink></NavDropdown.Item>
-                                <NavDropdown.Item><NavLink to='/category/memoria' className={nav => nav.isActive ? 'nav-active' : ''} style={{textDecoration:"none"}}>Memorias RAM</NavLink></NavDropdown.Item>
+                                <NavDropdown.Item><NavLink to='/categoria/mother' className={nav => nav.isActive ? 'nav-active' : ''}>Motherboards</NavLink></NavDropdown.Item>
+                                <NavDropdown.Item><NavLink to='/categoria/micro' className={nav => nav.isActive ? 'nav-active' : ''}>Microprocesadores</NavLink></NavDropdown.Item>
+                                <NavDropdown.Item><NavLink to='/categoria/memoria' className={nav => nav.isActive ? 'nav-active' : ''}>Memorias RAM</NavLink></NavDropdown.Item>
                             </NavDropdown>                            
                         </Nav>
                         <Nav>
-                            <Nav.Link to='/cart'><CartWidget /></Nav.Link>
+                            <CartWidget />
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
@@ -32,6 +32,4 @@ function NavBar(props) {
         </div>
     )
 }
-/* <Nav.Link href="#home">Home</Nav.Link>
-<Nav.Link href="#nosotros">Nosotros</Nav.Link> */
 export default NavBar;

@@ -6,6 +6,7 @@ import ItemListContainer from './components/pages/ItemListContainer';
 import ItemDetailContainer from './components/pages/ItemDetailContainer';
 import NavBar from './components/NavBar';
 import Cart from './components/Cart'
+import Checkout from './components/Checkout';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
         <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+        <Route path='/checkout' element={<Checkout/>}/>
       </Routes>      
     </div>
   );

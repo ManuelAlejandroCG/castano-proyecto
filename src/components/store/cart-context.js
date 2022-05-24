@@ -36,11 +36,9 @@ export const CartContextProvider = ({children}) => {
             } else {
                 const Swal = require('sweetalert2')
             }                                 
-        } else {
-            console.log({esta})
+        } else {            
             setProductList([product, ...productList])
         }
-        console.log({productList})
     }
 
     const remove = (id) => {

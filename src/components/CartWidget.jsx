@@ -12,7 +12,7 @@ const CartWidget = () => {
         <>
           <NavLink to="/cart">
             <i className="bi bi-cart"></i>
-            <span classname="unidades">{itemsTotal()}</span>
+            <span className="unidades">{itemsTotal()}</span>
           </NavLink>
         </>
       )}
