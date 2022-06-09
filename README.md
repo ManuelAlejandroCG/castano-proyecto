@@ -1,79 +1,26 @@
+# Proyecto Final
+### Castaño Manuel
 
-El proyecto se basa en un e-comerce de elementos de copmutadoras, totalmente ficticio,
+## Descripcion Breve
 
-fuera de las dependencias tratadas en clase se incluyo react-bootstrap para dar estilo a los componentes
+El proyecto es un e-comerce de elementos de computadoras totalmente ficticio, cuenta con 9 productos de muestra repartidos en 3 categorias para poder aplicar filtros de busqueda, 
+- la informacion acerca de los productos es obtenida de una base de datos creada en firebase incluidas las imagenes de los productos
+- los pedidos una vez finalizados son cargados a otra coleccion en la misma base de firebase
 
-sigue con los 2s de delay en las cargas, no sabia si eso habia que quitarlo o dejarlo asi que lo deje
 
-Dejo el codigo de abajo porque tiene algunos datos utiles espero no moleste
+## Demostracion de navegacion del sitio
 
-# Getting Started with Create React App
+se incluye con la entrga en enlace a un GIF que demuestra la navegacion del sitio desde la landing hasta finalizar una compra
+```sh
+https://drive.google.com/file/d/1PoEAsvzESU5_JqYKmv6-XpVgnibQqPSI/view?usp=sharing 
+```
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Frameworks adicionales
 
-## Available Scripts
+```sh
+|React-bootstrap| https://react-bootstrap.github.io/
+```
 
-In the project directory, you can run:
+## Ordenamiento
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Entiendo que como sugerencia habian indicado que los componentes se encontraran agrupados en carpetas pero debido a la corta cantidad de componentes y a que se ordenan alfabeticamente por los .css al tener el mismo nombre con distinta extencion se ordenan pegados me resulto mas facil trabajar con los elementos ordenados sueltos dentro de la carpeta "components"

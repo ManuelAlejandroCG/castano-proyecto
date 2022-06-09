@@ -11,7 +11,7 @@ function Item({ item }) {
             <Card.Header>{item?.nombre}</Card.Header>
             <Card.Img variant="top" src={item?.imagen} alt="imagen del producto"></Card.Img>
             <Card.Body>
-                <Card.Text>{item?.precio}</Card.Text>
+                <Card.Text>${item?.precio}</Card.Text>
             </Card.Body>
             <Link to={'/item/' + item?.id}>
                 <Button variant="primary" >Ver Detalle</Button>

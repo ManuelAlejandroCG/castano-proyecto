@@ -17,11 +17,10 @@ function ItemListContainer(){
   const [itemList, setItemList] = useState([]);
   const [load, setLoad] = useState(true);
   const { categoryId } = useParams();
-  
   useEffect(()=>{
     setLoad(true)
     getProducts(categoryId)
-    .then(snapshot => {
+    .then((snapshot) => {
       setItemList(snapshot.docs.map(doc =>{
         return { ...doc.data(), id: doc.id}
       }));
